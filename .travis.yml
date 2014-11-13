@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "0.10"
+  - "0.10.31"
 before_script:
   - npm install -g gulp
   - git config --global user.name "Travis-CI"
