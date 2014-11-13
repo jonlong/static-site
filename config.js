@@ -3,6 +3,8 @@ var config = {
     title: 'Static Site Template',
     baseURL: '//sample.github.io/'
   },
+  repo: 'jonlong/static-site',
+  deployBranch: 'gh-pages',
   port: 3000,
   paths: {
     src: {

@@ -9,7 +9,7 @@ gulp.task('ghPages', function() {
         'git init .',
         'git add .',
         'git commit -m "Deploy"',
-        'git push git@github.com:jonlong/jonlong.github.io master:master --force',
+        'git push git@github.com:' + config.repo + ' master:' + config.deployBranch + ' --force',
         'rm -rf .git'
       ],
       {
