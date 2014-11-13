@@ -8,7 +8,7 @@ gulp.task('travis', ['build'], function() {
       shell([
         'git init .',
         'git add .',
-        'git commit -m "Deploy"',
+        'git commit -m "[Travis CI] Deploy"',
         'git push "https://$GH_TOKEN@$GH_REF" master:' + config.deployBranch +' --force'
       ],
       {

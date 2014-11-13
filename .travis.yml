@@ -6,6 +6,8 @@ before_install:
   - gem install sass
 before_script:
   - npm install -g gulp
+  - npm install -g bower
+  - bower install
   - git config --global user.name "Travis-CI"
   - git config --global user.email "jon@linesandwaves.com"
 branches:

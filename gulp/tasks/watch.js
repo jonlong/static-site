@@ -2,8 +2,6 @@ var gulp = require('gulp');
 var config = require('../../config');
 var tinylr = require('tiny-lr')();
 
-tinylr.listen();
-
 function notifyLiveReload(event) {
   var fileName = require('path').relative(__dirname, event.path);
 
@@ -15,6 +13,9 @@ function notifyLiveReload(event) {
 }
 
 gulp.task('watch', function() {
+  
+  tinylr.listen();
+
   gulp.watch(config.paths.src.sass + '/**', ['sass']);
   gulp.watch(config.paths.src.templates + '/**', ['metalsmith']);
   gulp.watch(config.paths.src.base + '/**', ['metalsmith']);
