@@ -4,6 +4,7 @@
 - git config in travis.yml
 - GH_REF in travis.yml
 - [secure token](https://github.com/pwmckenna/node-travis-encrypt) in travis.yml ([instructions here](https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db))
+- branch target in travis.yml
 
 ## Development
 

@@ -7,7 +7,7 @@ before_script:
   - git config --global user.email "jon@linesandwaves.com"
 branches:
   only:
-  - source
+  - master
 script: gulp travis
 env:
   global:
