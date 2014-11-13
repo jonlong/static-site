@@ -1,0 +1,9 @@
+/**
+ * Strip Unit Function
+ *
+ * Remove the units from numeric values (8px -> 8)
+ */
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}

@@ -1,0 +1,37 @@
+/**
+ * SVG Background Mixin
+ *
+ * Sets an SVG background image on compatible devices, and adds a .png
+ * fallback for non-compatible devices.
+ *
+ * Optional parameter for `background-size`. Creates fallback filename according
+ * to guidelines in the `svg.js` gulp task.
+ *
+ * Utilizes Modernizr for feature detection and application of the .no-svg class.
+ *
+ * Sample Usage:
+ *
+ * .logo {
+ *      @include svg-background('logo');
+ *  }
+ *
+ * Sample Output:
+ *
+ * .logo {
+ *     background-image: url('/assets/svg/logo.svg');
+ *     .no-svg & {
+ *         background-image: url('/assets/svg/logo.svg.logo.png');
+ *     }
+ *
+ * }
+ */
+
+@mixin svg-background($name, $size:false){
+    background-image: url('/assets/images/svg/#{$name}.svg');
+    @if($size){
+        background-size: $size;
+    }
+    .no-svg &{
+        background-image: url('/assets/#{$name}.svg.#{$name}.png');
+    }
+}

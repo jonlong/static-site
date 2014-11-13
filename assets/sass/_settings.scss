@@ -1,0 +1,32 @@
+/**
+ * Breakpoints
+ *
+ * Set in ems to enable different layouts at different zoom levels
+ * http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/
+ *
+ */
+
+@import "functions/em";
+
+$screen-xs: em(600);
+$screen-sm: em(900);
+
+/**
+ * Colors
+ */
+
+$primary: #fff;
+$secondary: #6BA2E1;
+
+/**
+ * Margins
+ */
+
+$gutterSize: 25px;
+
+/**
+ * Fonts
+ */
+
+$headlineFont: 'Roboto Slab', serif;
+$copyFont: 'Open Sans', sans-serif;

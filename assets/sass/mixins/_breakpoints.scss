@@ -1,0 +1,44 @@
+/**
+ * Breakpoints Mixin
+ *
+ * Define media queries using shorthand names with pre-filled values
+ *
+ * Usage Example:
+ *
+ * .sidebar {
+ *     width: 60%
+ *     float: left;
+ *     margin: 0 2% 0 0;
+ *     @include bp-small {
+ *         width: 100%;
+ *         float: none;
+ *         margin: 0;
+ *     }
+ * }
+ *
+ * Output Example:
+ *
+ *  .sidebar {
+ *     width: 60%
+ *     float: left;
+ *     margin: 0 2% 0 0;
+ *     @media only screen and (min-width: 30em){
+ *         .sidebar{width: 100%; float: none; margin: 0;}
+ *     }
+ * }
+ *
+ */
+
+@import "../settings";
+
+@mixin screen-sm {
+  @media only screen and (min-width: $screen-xs) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media only screen and (min-width: $screen-sm) {
+    @content;
+  }
+}

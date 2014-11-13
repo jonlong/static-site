@@ -1,0 +1,14 @@
+/**
+ * Calculate Em Size
+ *
+ * Uses a target context to return the proper em size.
+ * If no target is specified, it uses as base font context as the target.
+ * If $base-font-context is not already defined, it sets a default.
+ */
+@import "functions/strip-unit";
+
+$base-font-context: 16 !default;
+
+@function em($pixels, $context: $base-font-context) {
+  @return #{strip-unit($pixels)/strip-unit($context)}em
+}

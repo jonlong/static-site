@@ -1,0 +1,12 @@
+/**
+ * Calculate Rem Size
+ *
+ * Convert px to rem sizes.  Sets a default <html> base font context.
+ */
+@import "functions/strip-unit";
+
+$base-font-context: 16 !default;
+
+@function rem($pixels) {
+  @return #{strip-unit($pixels)/$base-font-context}rem
+}
