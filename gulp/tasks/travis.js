@@ -9,7 +9,7 @@ gulp.task('travis', ['build'], function() {
         'git init .',
         'git add .',
         'git commit -m "Deploy"',
-        'git push "https://$GH_TOKEN@$GH_REF" master:master --force'
+        'git push "https://$GH_TOKEN@$GH_REF" master:' + config.deployBranch +' --force'
       ],
       {
         cwd: config.paths.build.base
