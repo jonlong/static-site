@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - "0.10.31"
+before_install:
+  - gem update --system
+  - gem install sass
 before_script:
   - npm install -g gulp
   - git config --global user.name "Travis-CI"
@@ -12,4 +15,4 @@ script: gulp travis
 env:
   global:
   - GH_REF: github.com/jonlong/static-site
-  - secure: B7vul3Y+6eP81NxYJ32OqQb7GVcsf1FXNmXD7gceKCxWGixGe5cOAPshKV47CP4RF1wt6aHtu9Ny1gGeEyVS1nvO7io/xdTkMOlYsIYhC11I7RLkfYZ8W0PNZqfDCVyircHe70wUMLkHYSy7fXH036Z6J/k0RoWWe4QEPyEmKMQ=
+  - secure: fuSuEkbSNXGuwmuViqy3+awDwTFAxfr+jIEhRkJtx1t1zMtIX+WB9goEOXYEPbCvweEE1NOoxuH2GUXt3udmttlbq1lt+iXEpXVJHVjKfv9KgrBurIFnvOTQ7JdKK0stPFgRs2zSl1BlkxR88quMvD6EMLvobmy+ZZpATOxCPYM=
