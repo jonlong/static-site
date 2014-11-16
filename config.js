@@ -15,6 +15,7 @@ var config = {
       sass: './assets/sass',
       images: './assets/images',
       components: './assets/components',
+      js: './assets/js',
       sassIncludePaths: [
         './assets/components'
       ]
@@ -28,5 +29,6 @@ var config = {
     }
   }
 };
+
 
 module.exports = config;
