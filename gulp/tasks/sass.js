@@ -1,14 +1,17 @@
 var gulp = require('gulp');
 var sass = require('gulp-ruby-sass');
 var pixrem = require('gulp-pixrem');
-var config = require('../../config');
+var handleErrors = require('../util/handleErrors');
+var config = require('../config').sass;
 
-gulp.task('sass', function() {
-  return gulp.src(config.paths.src.sass + '/**')
+gulp.task('sass', ['images'], function () {
+  return gulp.src(config.src)
     .pipe(sass({
-      loadPath: config.paths.src.sassIncludePaths,
+      // compass: true,
+      // bundleExec: true,
+      loadPath: config.loadPaths
     }))
-    .on('error', function (err) { console.log(err.message); })
+    .on('error', handleErrors)
     .pipe(pixrem())
-    .pipe(gulp.dest(config.paths.build.css));
+    .pipe(gulp.dest(config.dest));
 });
