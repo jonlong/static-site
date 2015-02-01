@@ -5,6 +5,7 @@ var filter = require('gulp-filter');
 var gulpsmith = require('gulpsmith');
 var frontMatter = require('gulp-front-matter');
 var plumber = require('gulp-plumber');
+var tap = require('gulp-tap');
 var markdown = require('metalsmith-markdown');
 var templates = require('metalsmith-templates');
 var collections = require('metalsmith-collections');
@@ -61,12 +62,13 @@ gulp.task('metalsmith', function() {
     }))
     .pipe(frontMatterFilter)
     // grab files with front matter and assign them as a property so metalsmith will find it
-    .pipe(frontMatter({
-      property: 'frontMatter'
-    })).on('data', function(file) {
+    .pipe(frontMatter())
+    .pipe(tap(function(file, t) {
+      if (file.frontMatter) {
         _.assign(file, file.frontMatter);
         delete file.frontMatter;
-    })
+      }
+    }))
     // remove the filter (back to everything in /src) and let metalsmith do its thing
     .pipe(frontMatterFilter.restore())
     .pipe(
