@@ -12,6 +12,6 @@ gulp.task('sass', ['images'], function () {
       loadPath: config.loadPaths
     }))
     .on('error', handleErrors)
-    .pipe(pixrem())
+    // .pipe(pixrem())
     .pipe(gulp.dest(config.dest));
 });
