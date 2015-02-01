@@ -36,7 +36,7 @@ Deploys built files to the deploy branch specified in [config.js](https://github
 ### Configure Travis-CI
 
 - [Sign Up](https://travis-ci.org/) for an account with Travis-CI, and connect your public GitHub repos.
-- In [config.js](https://github.com/jonlong/static-site/blob/master/config.js), change the `repo` and `deployBranch` values accordingly. For organization pages, `deployBranch` should be `"master"`. For project pages, it should be `gh-pages`.
+- In [config.js](https://github.com/jonlong/static-site/blob/master/config.js), change the `repo` and `deployBranch` values accordingly. For organization pages, `deployBranch` should be `master`. For project pages, it should be `gh-pages`.
 
 #### Configure travis.yml
 
