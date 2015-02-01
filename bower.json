@@ -16,6 +16,6 @@
   "dependencies": {
     "svg4everybody": "*",
     "normalize-scss": "~3.0.1",
-    "picturefill": "~2.1.0",
+    "picturefill": "~2.1.0"
   }
 }
