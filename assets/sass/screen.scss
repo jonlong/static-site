@@ -12,8 +12,6 @@
  * Libs
  */
 
-@import "bourbon/app/assets/stylesheets/bourbon";
-@import "neat/app/assets/stylesheets/neat";
 
 /**
  * Functions
@@ -34,222 +32,20 @@
     #Generic
 \*------------------------------------*/
 
-// Normalize
-@import "normalize-scss/normalize";
-
-.hidden {
-    @include hide-text;
-}
-
-.table-links {
-    display: table;
-    margin: 0 auto;
-}
-
 /*------------------------------------*\
     #Base
 \*------------------------------------*/
 
-@import "bitters/app/assets/stylesheets/variables";
-@import "bitters/app/assets/stylesheets/buttons";
-@import "bitters/app/assets/stylesheets/lists";
-@import "bitters/app/assets/stylesheets/typography";
-@import "bitters/app/assets/stylesheets/base";
-
-::selection {
-  background: #87BAF4;
-}
-
-a {
-    text-decoration: underline;
-    color: inherit;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-}
-
-p {
-    margin: 0;
-}
-
-p + p {
-    margin-top: rem($gutterSize);
-}
-
-p, li {
-    font-family: $copyFont;
-}
-
-ul, ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 
 /*------------------------------------*\
     #Objects
 \*------------------------------------*/
 
-.container,
-%container {
-    @include outer-container;
-}
-
-.row {
-    @include row();
-    padding: 0 rem($gutterSize);
-    padding: 0 rem($gutterSize);
-}
 
 /*------------------------------------*\
     #Components
 \*------------------------------------*/
 
-
-.page-head {
-    @extend %container;
-    padding: rem($gutterSize) 0 rem($gutterSize);
-    text-align: center;
-    border-bottom: rem(2) solid $primary;
-
-    @include screen-sm {
-        padding-top: rem($gutterSize * 2);
-        text-align: left;
-        position: relative;
-    }
-}
-
-    .page-head__left-block {
-        // position: absolute;
-        // bottom: $gutterSize;
-        // left: 0;
-    }
-
-    .page-head__right-block {
-        display: none;
-
-        @include screen-sm {
-            bottom: rem($gutterSize);
-            position: absolute;
-            right: 0;
-            display: block;
-        }
-    }
-
-    .page-head__center-block {
-        text-align: center;
-        a {
-            font-family: $headlineFont;
-            text-decoration: none;
-        }
-    }
-
-        .page-head__nav-item {
-            margin: 0 rem($gutterSize/2);
-            display: inline-block;
-        }
-
-.page-footer {
-    padding: rem($gutterSize) 0;
-    margin: 0 auto;
-    clear: both;
-    border-top: rem(2) solid $primary;
-    text-align: center;
-
-    @include screen-sm {
-        text-align: left;
-    }
-}
-
-    .page-footer__item {
-        font-size: rem(12);
-        margin: rem($gutterSize/2) rem(15);
-
-        @include screen-sm {
-            font-size: rem(13);
-            display: inline-block;
-            margin: 0 rem(15);
-        }
-    }
-
-    .page-footer__link {
-        font-size: rem(13);
-        display: block;
-
-        @include screen-sm {
-            display: inline-block;
-        }
-    }
-
-.post {
-
-    h2 {
-        font-family: $copyFont;
-        font-size: 1.1em;
-        font-weight: 400;
-        line-height: 1.5em;
-        margin-bottom: 1.2em;
-    }
-
-    h3 {
-        font-family: $headlineFont;
-        font-size: 1em;
-        font-weight: 600;
-        text-transform: uppercase;
-        line-height: 1.4em;
-        margin-bottom: .5em;
-    }
-
-    p {
-        font-family: $headlineFont;
-        font-weight: 300;
-        letter-spacing: 1;
-        margin-bottom: 1.5em;
-    }
-
-    strong {
-        font-family: $copyFont;
-        font-weight: 600;
-        font-size: .8em;
-        text-transform: uppercase;
-    }
-
-
-    hr {
-        width: 3em;
-    }
-
-}
-
-    .post__category {
-        border-bottom: 1px solid;
-        display: inline-block;
-        font-family: $copyFont;
-        font-size: .7em;
-        font-weight: 600;
-        margin-bottom: 2em;
-        padding: .1em 0;
-        text-align: left;
-        text-transform: uppercase;
-    }
-
-    .post__header {
-        font-family: $headlineFont;
-        font-size: 1.6em;
-        font-weight: 400;
-        margin-bottom: .6em;
-    }
-
-    .post__date {
-        font-family: $headlineFont;
-        font-size: .8em;
-        margin-bottom: .5em;
-    }
-
-    .post__author {
-        font-family: $copyFont;
-    }
 
 /*------------------------------------*\
     #Trumps

@@ -14,16 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "3.2.1",
-    "neat": "1.5.1",
     "svg4everybody": "*",
     "normalize-scss": "~3.0.1",
     "picturefill": "~2.1.0",
-    "bitters": "~0.10.1",
-    "refills": "~0.0.2"
-  },
-  "devDependencies": {
-    "bourbon": "3.1.8",
-    "neat": "1.5.1"
   }
 }
