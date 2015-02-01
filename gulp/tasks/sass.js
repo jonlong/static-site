@@ -8,7 +8,7 @@ gulp.task('sass', ['images'], function () {
   return gulp.src(config.src)
     .pipe(sass({
       // compass: true,
-      // bundleExec: true,
+      bundleExec: true,
       loadPath: config.loadPaths
     }))
     .on('error', handleErrors)
