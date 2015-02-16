@@ -19,25 +19,13 @@ var swigExtras = require('swig-extras');
 var config = require('../../config');
 
 var NODE_ENV = process.env.NODE_ENV || 'development';
-var BASE_URL = process.env.BASE_URL || config.blog.baseURL;
-
-var buildResponsiveImageMarkup = function(params) {
-  return '<picture>\
-              <!--[if IE 9]><video style="display: none;"><![endif]-->\
-              <source srcset="' + config.paths.build.images + '/' + params.lg + '" media="(min-width: 1000px)">\
-              <source srcset="' + config.paths.build.images + '/' + params.md + '" media="(min-width: 800px)">\
-              <!--[if IE 9]></video><![endif]-->\
-              <img srcset="' + config.paths.build.images + '/' + params.sm + '" alt="' + params.alt + '">\
-          </picture>';
-};
+var BASE_URL = process.env.BASE_URL || config.site.baseURL;
 
 var buildCaptionedImageMarkup = function(params) {
-  var image = buildResponsiveImageMarkup(params);
-
-  return '<figure class="media">\
-              ' + image + '\
-              <figcaption class="media__caption">' + params.caption + '</figcaption>\
-          </figure>';
+  return '<div class="captioned-image">\
+              <img class="img-responsive" src="' + params.src + '" />\
+              <p class="caption">' + params.caption + '</p>\
+          </div>';
 };
 
 /**
@@ -77,7 +65,7 @@ gulp.task('metalsmith', function() {
           env: NODE_ENV,
           BASE_URL: BASE_URL,
           now: new Date(),
-          blog: config.blog
+          site: config.site
         })
         // Use shortcodes for custom markdown tags
         .use(shortcodes({
@@ -85,10 +73,6 @@ gulp.task('metalsmith', function() {
               'captioned-image': function(str, params) {
                 var image = buildCaptionedImageMarkup(params);
                 return image;
-            },
-            'image': function(str, params) {
-              var image = buildResponsiveImageMarkup(params);
-              return image;
             }
           }
         }))
@@ -98,7 +82,9 @@ gulp.task('metalsmith', function() {
         }))
         .use(collections({
           posts: {
-            pattern: 'posts/*'
+            pattern: 'posts/*',
+            sortBy: 'date',
+            reverse: true
           }
         }))
         .use(permalinks({

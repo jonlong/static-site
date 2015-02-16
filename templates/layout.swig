@@ -3,62 +3,68 @@
     <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
     <!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
     <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="{{description}}" />
+        <meta name="description" content="{{ description }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{% block title %}{{blog.title}}{% endblock %}</title>
+        <title>{% block title %}{{ blog.title }}{% endblock %}</title>
 
         <link rel="stylesheet" href="/assets/css/screen.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'>
-
-
-        <!--[if lte IE 8]><!-->
-        <script type="text/javascript" src="/assets/js/polyfills/svg4everybody.ie8.min.js"></script>
-        <!--<![endif]-->
-
-        <!--[if gt IE 8]><!-->
-        <script type="text/javascript" src="/assets/js/polyfills/svg4everybody.min.js"></script>
-        <!--<![endif]-->
     </head>
-    <body class="{% block bodyclass %}{% endblock %}">
 
-        <header class="page-head">
+    <body>
 
-            <div class="page-head__left-block">
-                <a href="/">LOGO</a>
+        <header class="page-head row">
+
+            <div class="large-3 columns">
+                <img src="http://placehold.it/400x100&text=Logo">
             </div>
 
-            <nav class="page-head__center-block">
-                <ul>
-                    <li class="page-head__nav-item"><a href="#">Link</a></li>
-                    <li class="page-head__nav-item"><a href="#">Link</a></li>
-                    <li class="page-head__nav-item"><a href="#">Link</a></li>
+            <nav class="large-9 columns">
+                <ul class="button-group right">
+                    <li>
+                        <a class="button" href="#">Link</a>
+                    </li>
+
+                    <li>
+                        <a class="button" href="#">Link</a>
+                    </li>
+
+                    <li>
+                        <a class="button" href="#">Link</a>
+                    </li>
                 </ul>
             </nav>
-
-            <div class="page-head__right-block">
-                <a class="btn" href="#">Call To Action</a>
-            </div>
 
         </header>
 
         {% block content %}{% endblock %}
 
-        <footer class="page-footer">
-            <div class="table-links">
-                <p class="page-footer__item page-footer__item--variant">Company Name, LLC</p>
-                <p class="page-footer__item">Washington, DC</p>
-                <p class="page-footer__item">
-                    <a class="page-footer__link btn btn--negative" href="mailto:jon@linesandwaves.com">jon@linesandwaves.com</a>
-                </p>
-                <p class="page-footer__item">
-                    <a class="page-footer__link btn btn--negative" href="https://twitter.com/linesandwaves">@linesandwaves</a>
-                </p>
-            </div>
+        <footer class="page-footer row">
+
+            <hr />
+
+            <ul class="inline-list right">
+
+                <li>Company Name, LLC</li>
+
+                <li>Washington, DC</li>
+
+                <li>
+                    <a href="mailto:jon@linesandwaves.com">jon@linesandwaves.com</a>
+                </li>
+
+                <li>
+                    <a href="https://twitter.com/linesandwaves">@linesandwaves</a>
+                </li>
+
+            </ul>
+
         </footer>
 
         {% block scripts %}{% endblock %}
@@ -69,7 +75,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXXXX-X');ga('send','pageview');
+            ga('create','{{ site.analyticsUA }}');ga('send','pageview');
         </script>
     </body>
 </html>

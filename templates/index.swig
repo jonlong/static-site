@@ -6,37 +6,52 @@
 
 {% block content %}
 
-<div class="container">
+<div class="row">
 
-    <ol>
+    <div class="text-center">
 
-        {% for post in collections.posts %}
+        <svg role="img" title="Logo: Diamond">
+            <use xlink:href="/assets/images/icons.svg#diamond"></use>
+        </svg>
 
-            <li>
+    </div>
 
-                <article class="post">
+</div>
 
-                    <p class="post__category">Article Type</p>
+<div class="row">
 
-                    <h2 class="post__header">
-                        <a href="{{ post.path }}">{{ post.title }}</a>
-                    </h2>
+    <div class="large-12 columns">
 
-                    <p class="post__lead">{{ post.lead | markdown }}</p>
+        <h2>Posts</h2>
 
-                    <time class="post__date" datetime="{{post.date}}">{{ post.date | date('Y') }}</time>
+        <ol class="post-list">
 
-                    <hr>
+            {% for post in collections.posts %}
 
-                    <p class="post__author">{{ author }}</p>
+                <li class="post-list__item">
 
-                </article>
+                    <article class="post">
 
-            </li>
+                        <p class="subheader">Article Type</p>
 
-        {% endfor %}
+                        <h2>
+                            <a href="{{ post.path }}">{{ post.title }}</a>
+                            <p>{{ post.author }}</p>
+                        </h2>
 
-    </ol>
+                        <p>{{ post.lead | markdown }}</p>
+
+                        <time datetime="{{post.date}}">{{ post.date | date('F j, Y') }}</time>
+
+                    </article>
+
+                </li>
+
+            {% endfor %}
+
+        </ol>
+
+    </div>
 
 </div>
 

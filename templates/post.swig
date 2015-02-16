@@ -4,23 +4,23 @@
 
 {% block content %}
 
-<div class="container">
+<div class="row">
 
-    <article class="post">
+    <article class="large-12 columns">
 
-        <p class="post__category">Article Type</p>
+        <p class="subheader">Article Type</p>
 
-        <h1 class="post__header">{{ title }}</h1>
+        <h1>{{ title }}</h1>
 
-        <p class="post__lead">{{ lead | markdown }}</p>
+        <time class="post__date" datetime="{{ date }}">{{ date | date('F j, Y') }}</time>
 
-        <time class="post__date" datetime="{{ date }}">{{ date | date('Y') }}</time>
+        <p>{{ lead | markdown }}</p>
 
         {{ contents | safe }}
 
         <hr>
 
-        <p class="post__author">{{ author }}</p>
+        <p>By {{ author }}</p>
 
     </article>
 
