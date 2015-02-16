@@ -22,7 +22,10 @@
 
     <div class="large-12 columns">
 
-        <h2>Posts</h2>
+        <div class="clearfix">
+            <h2 class="left">Posts</h2>
+            <a class="button alert right" data-reveal-id="modal">Click Me For A Modal</a>
+        </div>
 
         <ol class="post-list">
 
@@ -54,5 +57,11 @@
     </div>
 
 </div>
+
+{% endblock %}
+
+{% block jsmarkup %}
+
+    {% include 'partials/modal.swig' %}
 
 {% endblock %}
