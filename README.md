@@ -6,6 +6,19 @@ Javascript-based static site scaffolding. Auto-deploys public repos to GitHub Pa
 
 Compiled with [Metalsmith](https://github.com/segmentio/metalsmith) and configured for [Swig](https://github.com/paularmstrong/swig/) templates.
 
+## What's in the box?
+
+The Gulpfile, based on [greypants' great starter repo](https://github.com/greypants/gulp-starter/) contains a ton of configurable tasks. Check out the 'gulp/tasks' directory for a complete look.
+
+The sample site is generated with the following tools: 
+
+- [Browserify](http://browserify.org/) for JS management
+- Image compression and automatic SVG spriting ([using SVG symbols](http://css-tricks.com/svg-symbol-good-choice-icons/))
+- Sass compilation
+- Starter sass structure (based on [cssguidelin.es](cssguidelin.es))
+
+Configure the site via the [app-level config file](https://github.com/jonlong/static-site/blob/master/config.js), and the [Gulp task config](https://github.com/jonlong/static-site/blob/master/gulp/config.js), and check out the [build](https://github.com/jonlong/static-site/blob/master/gulp/tasks/build.js) and [watch](https://github.com/jonlong/static-site/blob/master/gulp/tasks/watch.js) tasks to see how it all comes together.
+
 ## Quick Start
 
 ### Install Dependencies
