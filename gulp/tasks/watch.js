@@ -5,7 +5,6 @@
 
 var gulp  = require('gulp');
 var config= require('../../config');
-var debug = require('gulp-debug');
 
 gulp.task('watch', ['setWatch', 'browserSync'], function() {
   gulp.watch(config.paths.src.sass + '/**', ['sass']);

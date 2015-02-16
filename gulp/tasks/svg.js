@@ -5,7 +5,6 @@ var rename = require('gulp-rename');
 var svgmin = require('gulp-svgmin');
 var filter = require('gulp-filter');
 var flatten = require('gulp-flatten');
-var debug = require('gulp-debug');
 var merge = require('merge-stream');
 var config = require('../../config');
 var path = require('path');
