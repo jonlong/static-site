@@ -1,0 +1,12 @@
+.post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        padding-top: em(20);
+        margin-top: em(20);
+        border-top: em(1) solid #ccc;
+    }
+}
+

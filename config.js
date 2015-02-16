@@ -1,7 +1,8 @@
 var config = {
-  blog: {
+  site: {
     title: 'Static Site Template',
-    baseURL: '//sample.github.io/'
+    baseURL: '//sample.github.io/',
+    analyticsUA: 'UA-XXXXXXX-X'
   },
   repo: 'jonlong/static-site',
   deployBranch: 'gh-pages',
@@ -15,10 +16,7 @@ var config = {
       sass: './assets/sass',
       images: './assets/images',
       components: './assets/components',
-      js: './assets/js',
-      sassIncludePaths: [
-        './assets/components'
-      ]
+      js: './assets/js'
     },
     build: {
       base: './build',

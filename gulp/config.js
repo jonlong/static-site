@@ -12,16 +12,19 @@ module.exports = {
       baseDir: [dest, src]
     },
     files: [
-      dest + "/**",
+      dest + '/**',
       // Exclude Map files
-      "!" + dest + "/**.map"
+      '!' + dest + '/**.map'
     ]
   },
 
   sass: {
-    src: appConfig.paths.src.sass + "/*.{sass,scss}",
+    src: appConfig.paths.src.sass + '/*.{sass,scss}',
     dest: appConfig.paths.build.css ,
-    loadPaths: appConfig.paths.src.sassIncludePaths
+    loadPaths: [
+        appConfig.paths.src.components,
+        appConfig.paths.src.components + '/foundation/scss'
+    ]
   },
 
   images: {
