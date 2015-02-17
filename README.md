@@ -6,6 +6,8 @@ Javascript-based static site scaffolding. Auto-deploys public repos to GitHub Pa
 
 Compiled with [Metalsmith](https://github.com/segmentio/metalsmith) and configured for [Swig](https://github.com/paularmstrong/swig/) templates.
 
+![screenshot](https://cloud.githubusercontent.com/assets/482527/6233280/bfe05b86-b69f-11e4-9e3f-c34d7f457541.jpg)
+
 ## What's in the box?
 
 The Gulpfile, based on [greypants' great starter repo](https://github.com/greypants/gulp-starter/), contains a ton of configurable tasks. Check out the [gulp/tasks](https://github.com/jonlong/static-site/blob/master/gulp/tasks/) directory for a complete look.
