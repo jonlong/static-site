@@ -6,7 +6,7 @@ Javascript-based static site scaffolding. Auto-deploys public repos to GitHub Pa
 
 Compiled with [Metalsmith](https://github.com/segmentio/metalsmith) and configured for [Swig](https://github.com/paularmstrong/swig/) templates.
 
-![screenshot](https://cloud.githubusercontent.com/assets/482527/6233354/2e900f90-b6a0-11e4-9bfd-8ffb7dee46d0.jpg)
+![screenshot](https://cloud.githubusercontent.com/assets/482527/6241347/857eef80-b6e9-11e4-9e0a-9d1c3fd49aa5.jpg)
 
 ## What's in the box?
 
